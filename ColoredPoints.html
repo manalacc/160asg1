@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <div>
+      <button type="button" id="Drawing">My Drawing</button>
+      <input type="button" value="Clear", id="ClearButton">
+    </div>
+    <div>Choose Shape:
+      <button type="button" id="PointButton">Point</button>
+      <button type="button" id="TriButton">Triangle</button>
+      <button type="button" id="CirButton">Circle</button>
+    </div>
+    <div>Shape Color</div>
+    <div>
+      <input type="button" value="R" id="Rbutton">
+      <input type="button" value="G" id="Gbutton">
+      <input type="button" value="B" id="Bbutton">
+    </div>
+    <span class="child flex-child">Red
+        <input type="range" min="0" max="1" step="0.01" id="red" value="1">
+    </span>
+    <span class="child flex-child">Green
+        <input type="range" min="0" max="1" step="0.01" id="green" value="1">
+    </span>
+    <span class="child flex-child">Blue
+        <input type="range" min="0" max="1" step="0.01" id="blue" value="1">
+    </span>
+    <br></br>
+    <span>Size
+        <input type="range" min="1" max="35" step="1" id="size", value="10">
+    </span>
+    <span>Circle Segments
+      <input type="range" min="3" max="25" step="1" id="segments", value="10">
+    </span>
+    <br></br>
+    <button id="ChaseButton">Start Chase Mode</button>
+    Cat (triangle) chases the Mouse (you)
+    <br></br>
+    <div>Emmanuel Manalac</div>
+    <div>emanalac@ucsc.edu</div>
+    <img
+    class="fit-picture"
+    src="a.jpg"
+    width="300" height="300"/>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="ColoredPoints.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Drawing.js"></script>
+    <script src="Game.js"></script>
+  </body>
+</html>
