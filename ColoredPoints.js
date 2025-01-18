@@ -108,6 +108,10 @@ function addActionsForHtmlUI() {
         catPosition = [1, 1];
     });
 
+    document.getElementById('endChaseButton').addEventListener('mouseup', function() {
+        endChaseMode(); 
+    });
+
 }
 
 function main() {

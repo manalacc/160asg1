@@ -9,6 +9,10 @@ function startChaseMode() {
     gameOver = false; // Reset game state
     chaseLoop(); // Start the chase loop
 }
+function endChaseMode() {
+    canvas.onmousemove = function(ev) { if(ev.buttons == 1) { click(ev) }}; // Update mouse position on movement
+}
+
 
 function updateMousePosition(ev) {
     [mousePosition[0], mousePosition[1]] = convertCoordinatesEventToGL(ev);
@@ -33,6 +37,7 @@ function chaseLoop() {
     if (distance < 0.05) {
         gameOver = true;
         alert('Game Over! You got caught!');
+        endChaseMode();
         return;
     }
 
